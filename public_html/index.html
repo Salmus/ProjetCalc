@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <title>Calculatrice en javascript</title>
+        <script type = "text/javascript" src = "js/calculatrice.js"></script>
+        <link rel = "stylesheet"  type = "text/css" href = "css/calculatrice.css" />
+    </head>
+    <body>
+        <table class = "calculatrice" id = "calc">
+            <tr>
+                <td colspan = "4" class = "calc_td_resultat">
+                    <input type = "text" readonly = "readonly" name = "calc_resultat" id = "calc_resultat" class = "calc_resultat"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class = "calc_td_btn">
+                    <input type = "button" class = "calc_btn_op" value = "CE" onClick = "initialiser()" />
+                </td>
+                <td class = "calc_td_btn">
+                    <input type = "button" class = "calc_btn_op" value = "&leftarrow;" onClick = "retourArriere()" />
+                </td>
+            </tr>
+            <tr>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value="7" onClick = "clavier(7)"/>
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value="8" onClick = "clavier(8)" />
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "9" onClick = "clavier(9)" />
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn_op" value = "&divide;" onClick = "clavier('/')"/>
+                </td>
+            </tr>
+                        <tr>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "4" onClick = "clavier(4)" />
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "5" onClick = "clavier(5)" />
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "6" onClick = "clavier(6)"/>
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn_op" value = "x" onClick = "clavier('*')"/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "1" onClick = "clavier(1)" />
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "2" onClick = "clavier(2)" />
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "3" onClick = "clavier(3)"/>
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn_op" value = "-" onClick = "clavier('-')" />
+                </td>
+            </tr>
+            <tr>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn" value = "0"  onClick = "clavier(0)"/>
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn_op" value = "." onClick = "clavier('.')" />
+                </td>
+                <td class = "calc_td_btn">
+                    <input type = "button" class = "calc_btn_op" value = " = " onClick = "calcul()" />
+                </td>
+                <td class = "calc_td_btn">
+                        <input type = "button" class = "calc_btn_op" value = "+" onClick = "clavier('+')" />
+                </td>
+            </tr>
+        </table>
+        <script type = "text/javascript">
+                initialiser();
+                document.addEventListener('keydown', (event) => {
+                    KeyDetect(event);
+                })
+        </script>
+    </body>
+</html>
